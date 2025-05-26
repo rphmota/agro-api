@@ -12,8 +12,10 @@ services:
       - '5432:5432'
     volumes:
       - pgdata:/var/lib/postgresql/data
+    networks:
+      - api-network
 
-  db-test:
+  db_test:
     image: postgres:15
     container_name: agro-db-test
     restart: always
@@ -25,6 +27,8 @@ services:
       - '5433:5432'
     volumes:
       - pgdata_test:/var/lib/postgresql/data
+    networks:
+      - api-network
 
   api:
     build: .
@@ -32,14 +36,16 @@ services:
     command: pnpm start:dev
     ports:
       - '3000:3000'
-    volumes:
-      - .:/app
     depends_on:
       - db
-      - db-test
-    env_file:
-      - .env.docker
+      - db_test
+    networks:
+      - api-network
 
 volumes:
   pgdata:
   pgdata_test:
+
+networks:
+  api-network:
+    driver: bridge
