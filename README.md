@@ -8,6 +8,8 @@ API NestJS para cadastro de produtores rurais. Usa PostgreSQL, Docker e Clean Ar
 docker-compose up
 ```
 
+as colections postman estão na raiz do projeto
+
 ### Testes (API + banco de teste)
 
 #### Vao ser rodados os testes atraves do script start-dev.sh onde o mesmo executa os testes e sobe a api
