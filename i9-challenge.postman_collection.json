@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "319fa548-07d8-41d1-b74e-0401b12aa1b9",
+		"name": "i9-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2105614"
+	},
+	"item": [
+		{
+			"name": "Edit-Produtores",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nome\": \"Nash\",\n  \"cpfCnpj\": \"02034282345\",\n  \"fazenda\": \"Fazenda Esperança\",\n  \"cidade\": \"Campinas\",\n  \"estado\": \"SP\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/produtores/49296fc9-1b86-4dbb-ae2c-353f26f259f9",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"produtores",
+						"49296fc9-1b86-4dbb-ae2c-353f26f259f9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Produtores",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nome\": \"João Silva 2\",\n  \"cpfCnpj\": \"02034282345\",\n  \"fazenda\": \"Nash\",\n  \"cidade\": \"Fortaleza\",\n  \"estado\": \"CE\",\n  \"areaTotal\": 1000,\n  \"areaAgricultavel\": 600,\n  \"areaVegetacao\": 200,\n  \"culturas\": [\"Soja\", \"Milho\"]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/produtores",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"produtores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-Produtores",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/produtores/fffcb02b-b24d-4cd7-ac8c-e9ceb459388a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"produtores",
+						"fffcb02b-b24d-4cd7-ac8c-e9ceb459388a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find-Produtores",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/produtores/16318d31-8367-466a-8bc1-f66062d222ff",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"produtores",
+						"16318d31-8367-466a-8bc1-f66062d222ff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "plantacoes-por-estado",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/relatorio-producao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"relatorio-producao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total-Fazendas",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/relatorio-producao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"relatorio-producao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total-Hectares",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/relatorio-producao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"relatorio-producao"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
